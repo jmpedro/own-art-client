@@ -1,0 +1,73 @@
+.users-follow {
+  padding: 20px;
+
+  &_item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: flex-start;
+
+    .ui.image {
+      width: 70px;
+      height: 70px;
+    }
+
+    &_left {
+      display: flex;
+      width: 15%;
+      justify-content: center;
+      flex-direction: column;
+      padding-left: 15px;
+      a {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 10px;
+
+        label {
+          &:hover {
+            cursor: pointer;
+            color: rgb(16, 120, 175);
+          }
+        }
+      }
+
+      button {
+        background: rgb(16, 120, 175);
+        border: none;
+        border-radius: 20px;
+        font-size: 12px;
+        color: white;
+        width: min-content;
+        padding: 5px 20px;
+
+        &:hover {
+          cursor: pointer;
+          background: rgb(35, 156, 221);
+        }
+      }
+    }
+
+    &_right {
+      display: flex;
+      width: 70%;
+      flex-direction: row;
+      justify-content: flex-end;
+
+      .ui.image {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  hr {
+    width: 100%;
+    border: none;
+    height: 1px;
+    color: grey;
+    background: grey;
+    opacity: 0.3;
+  }
+}

@@ -1,0 +1,118 @@
+.users {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+
+  &_item {
+    display: flex;
+    width: 100%;
+    margin: 20px;
+    .ui.image {
+      width: 100px;
+      height: 100px;
+    }
+
+    @media (max-width: 750px) {
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      .ui.image {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    &_left {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+      justify-content: center;
+      align-items: flex-start;
+      width: 30%;
+      label {
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 5px;
+
+        &:hover {
+          cursor: pointer;
+          color: rgb(16, 120, 175);
+        }
+      }
+
+      span {
+        color: grey;
+      }
+
+      &_bottom {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        margin-top: 5px;
+        align-items: center;
+
+        button {
+          background: rgb(16, 120, 175);
+          border: none;
+          border-radius: 20px;
+          color: white;
+          padding: 5px 20px;
+
+          &:hover {
+            cursor: pointer;
+            background: rgb(35, 156, 221);
+          }
+        }
+
+        p {
+          font-weight: bold;
+        }
+      }
+
+      @media (max-width: 750px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+
+        span,
+        p {
+          display: none;
+        }
+      }
+    }
+
+    &_right {
+      display: flex;
+      width: 60%;
+      justify-content: flex-end;
+      .ui.image {
+        margin: 0 10px;
+
+        &:hover {
+          cursor: pointer;
+          opacity: 0.9;
+        }
+      }
+
+      @media (max-width: 750px) {
+        width: 100%;
+        justify-content: center;
+        margin-top: 20px;
+        .ui.image {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+  }
+
+  hr {
+    width: 100%;
+    border: none;
+    height: 1px;
+    color: grey;
+    background: grey;
+    opacity: 0.3;
+  }
+}

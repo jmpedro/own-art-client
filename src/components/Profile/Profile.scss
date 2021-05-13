@@ -1,0 +1,177 @@
+.profile {
+  &_banner {
+    padding: 20px;
+    width: 100%;
+    height: 40vh;
+    background-size: 100% 100%;
+
+    &_icon {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+      .icon {
+        display: flex;
+        color: rgb(216, 215, 215);
+        &:hover {
+          color: rgb(255, 255, 255);
+        }
+      }
+    }
+
+    &_social {
+      display: flex;
+      width: 100%;
+      height: 85%;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+      .ui.image {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &_box {
+    display: flex;
+
+    .data_user {
+      display: flex;
+      width: 30%;
+      flex-wrap: wrap;
+      position: relative;
+      height: min-content;
+      margin-left: 4%;
+      top: -120px;
+
+      .profile_data_info {
+        margin-left: 20px;
+
+        span {
+          color: rgb(118, 118, 118);
+        }
+
+        .icon_edit {
+          margin-left: 65px;
+
+          &:hover {
+            color: rgb(17, 121, 177);
+          }
+        }
+      }
+
+      .profile_data_numbers {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        div {
+          display: flex;
+          width: 70%;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        &_follow {
+          &:hover {
+            color: rgb(17, 121, 177);
+          }
+        }
+
+        hr {
+          border: none;
+          height: 1px;
+          width: 100%;
+          background-color: rgb(187, 187, 187);
+          color: rgb(187, 187, 187);
+        }
+        h3 {
+          margin-top: 10px;
+          text-align: center;
+        }
+
+        span {
+          color: rgb(118, 118, 118);
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .menu {
+      margin: 3%;
+      width: 65%;
+
+      &_user {
+        display: flex;
+        justify-content: center;
+
+        .ui.menu {
+          height: min-content;
+          display: flex;
+          justify-content: space-between;
+          padding: 5px;
+          width: 100%;
+          border: 1px solid rgba($color: grey, $alpha: 0.5);
+          border-radius: 3px;
+
+          div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            a {
+              font-weight: bold;
+              display: flex;
+              justify-content: center;
+              margin: 0 15px;
+              width: 100%;
+
+              &:hover {
+                background: transparent;
+                color: rgb(17, 121, 177);
+              }
+            }
+          }
+
+          .menu_user_buttons {
+            display: flex;
+            width: 100%;
+            justify-content: flex-end;
+
+            &_chat {
+              background: rgb(30, 197, 44);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: white;
+
+              .icon {
+                margin-left: 6px;
+              }
+
+              &:hover {
+                background: rgb(25, 245, 44);
+              }
+            }
+
+            &_follow {
+              background: rgb(17, 121, 177);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: white;
+
+              .icon {
+                margin-left: 6px;
+              }
+
+              &:hover {
+                background: rgb(50, 174, 241);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

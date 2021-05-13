@@ -1,0 +1,40 @@
+.nav-filters {
+  padding: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  span {
+    color: grey;
+  }
+
+  .ui.menu {
+    margin-top: 15px;
+    margin-right: 20px;
+    border: none;
+  }
+
+  &_categories {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    &_item {
+      display: inline-flex;
+      margin-top: 15px;
+      margin-right: 35px;
+      border: 1px solid rgb(184, 184, 184);
+      padding: 6px 12px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.4s;
+      &:hover {
+        border-color: rgb(17, 121, 177);
+      }
+    }
+  }
+}
+
+.color_item {
+  background-color: grey;
+}

@@ -1,0 +1,31 @@
+.about {
+  margin-top: 20px;
+
+  .ui.segment {
+    padding: 20px;
+
+    .about_edit {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .about_item {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-weight: bold;
+      margin-bottom: 10px;
+
+      .icon {
+        margin-right: 10px;
+      }
+
+      span,
+      a {
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

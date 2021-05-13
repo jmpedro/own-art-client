@@ -1,0 +1,24 @@
+.div_image {
+  margin-top: 20px;
+  display: flex;
+  align-items: flex-end;
+  height: 280px;
+  width: 100%;
+  background-size: 100% 100%;
+  border-radius: 3px;
+
+  &:hover {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+
+  &_bottom {
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px;
+    background: rgba(31, 31, 31, 0.5);
+    display: flex;
+    justify-content: space-between;
+  }
+}

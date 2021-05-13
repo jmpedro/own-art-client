@@ -1,0 +1,33 @@
+.content_follow {
+  padding: 25px;
+  width: 100%;
+  &_item {
+    background-size: 100% 100%;
+    border-radius: 5px;
+    height: 220px;
+    display: flex;
+
+    &_bottom {
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      width: 100%;
+      transition: 0.5s;
+      h3 {
+        display: none;
+        color: white;
+        padding: 10px;
+        background: linear-gradient(rgba(31, 31, 31, 0), rgba(31, 31, 31, 0.8));
+        width: 100%;
+        border-radius: 5px;
+      }
+      &:hover {
+        cursor: pointer;
+        h3 {
+          display: flex;
+        }
+      }
+    }
+  }
+}

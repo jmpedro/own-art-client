@@ -1,0 +1,82 @@
+body {
+  background-color: #fff;
+  color: black;
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  .ui.button,
+  a,
+  h6 {
+    color: black;
+    font-family: fantasy;
+  }
+
+  .ui.label {
+    color: black;
+    &:hover {
+      cursor: pointer;
+      color: rgb(84, 191, 248);
+    }
+    font-family: fantasy;
+  }
+
+  .ui.input {
+    input {
+      &:focus {
+        color: black;
+      }
+      font-family: fantasy;
+    }
+    border-color: rgb(84, 191, 248);
+    border-radius: 20px;
+  }
+}
+
+/* Variables de color si el tema es dark */
+body[data-theme="dark"] {
+  background-color: #010a10;
+  color: white;
+
+  .ui.menu,
+  .ui.modal,
+  .ui.segment {
+    background-color: #010a10;
+  }
+
+  .ui.segment {
+    border-color: grey;
+  }
+
+  p,
+  label,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  .ui.dropdown,
+  .ui.menu.item,
+  .ui.button,
+  a,
+  h6 {
+    color: white;
+    font-family: fantasy;
+  }
+
+  .ui.label {
+    color: white;
+    font-family: fantasy;
+  }
+
+  .ui.input {
+    input {
+      font-family: fantasy;
+    }
+    border-color: rgb(84, 191, 248);
+    border-radius: 20px;
+  }
+}

@@ -1,0 +1,86 @@
+.carousel-sectors {
+  margin: 15px 5px;
+
+  .slick-slide {
+    padding: 5px;
+
+    .sector_container {
+      width: 100%;
+      height: 120px;
+      border-radius: 5px;
+
+      background-size: cover;
+
+      &_fade {
+        background: rgba(31, 31, 31, 0.5);
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+          color: white;
+          font-size: 30px;
+          font-family: fantasy;
+        }
+
+        &:hover {
+          background: transparent;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .slick-arrow {
+    z-index: 1;
+
+    &::before {
+      font-size: 30px;
+    }
+
+    &.slick-next {
+      right: 20px;
+    }
+
+    &.slick-prev {
+      left: 20px;
+    }
+  }
+}
+
+.sector_subgenres {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+  .ui.button {
+    margin-right: 5px;
+    color: white;
+    background: rgb(17, 121, 177);
+
+    &:hover {
+      background: rgb(50, 174, 241);
+    }
+
+    &:focus {
+      background: rgb(50, 174, 241);
+    }
+  }
+}
+
+.sector_title {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+
+  h1 {
+    font-size: 60px;
+  }
+
+  label {
+    font-size: large;
+  }
+}

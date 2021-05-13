@@ -1,0 +1,58 @@
+.register {
+  display: flex;
+  height: 100vh;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+
+    .ui.form {
+      width: 80%;
+    }
+
+    &_action {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      .ui.button {
+        background: rgb(17, 121, 177);
+        color: white;
+
+        &:hover {
+          background: rgb(50, 174, 241);
+        }
+      }
+
+      span {
+        margin-left: 10px;
+        font-size: 12px;
+
+        a {
+          font-size: 12px;
+          color: rgb(17, 121, 177);
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 800px) {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &_image {
+    display: flex;
+    flex: 1;
+  }
+}
