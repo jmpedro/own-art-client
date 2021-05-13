@@ -10,7 +10,8 @@ class Content extends Component  {
     
     render() {
         
-        const { allPosts, header } = this.props
+        const { allPosts, header } = this.props;
+        
 
         return (
             <div className='content'>

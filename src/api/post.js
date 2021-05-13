@@ -1,3 +1,17 @@
+
+// Obtenemos todas las publicaciones
+export const getAllPostApi = (url) => {
+
+    return fetch(url)
+    .then(data =>{
+        return data.json();
+    })
+    .catch(err => {
+        return err;
+    })
+
+}
+
 export const publication = {
     "views_publication": {
         "categories": [

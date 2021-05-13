@@ -12,7 +12,6 @@ body {
   a,
   h6 {
     color: black;
-    font-family: fantasy;
   }
 
   .ui.label {
@@ -21,7 +20,6 @@ body {
       cursor: pointer;
       color: rgb(84, 191, 248);
     }
-    font-family: fantasy;
   }
 
   .ui.input {
@@ -29,7 +27,6 @@ body {
       &:focus {
         color: black;
       }
-      font-family: fantasy;
     }
     border-color: rgb(84, 191, 248);
     border-radius: 20px;
@@ -64,18 +61,13 @@ body[data-theme="dark"] {
   a,
   h6 {
     color: white;
-    font-family: fantasy;
   }
 
   .ui.label {
     color: white;
-    font-family: fantasy;
   }
 
   .ui.input {
-    input {
-      font-family: fantasy;
-    }
     border-color: rgb(84, 191, 248);
     border-radius: 20px;
   }
