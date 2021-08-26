@@ -1,12 +1,11 @@
 import React from 'react'
 import { Image } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
-import { allPosts } from '../../api/account'
 import './Users.scss'
 
 const Users = (props) => {
 
-    const { usersDB, header } = props;
+    const { usersDB, header, projects } = props;
     const { finalFilters } = usersDB
 
     return (
@@ -14,8 +13,8 @@ const Users = (props) => {
 
             <h2>{header}</h2>
             {
-                finalFilters.map( user => (
-                    <User key={user.uid} data={user} posts={allPosts.posts} />
+                finalFilters.map( (user, index) => (
+                    <User key={user.email} data={user} posts={projects[index]} />
                 ) )
             }
         </div>
@@ -26,7 +25,8 @@ const Users = (props) => {
 function User(props) {
 
     const { data, posts } = props;
-    const { profile_image, name, location, followers, sectors } = data
+    const { profile_image, name, location, followers, sectors } = data;
+    console.log(posts);
 
     return(
 
@@ -39,7 +39,7 @@ function User(props) {
                 {/* Datos del usuario y boton de seguir */}
                 <div className='users_item_left'>
 
-                    <Link to={`/${name}`}> <label>{name}</label> </Link>
+                    <Link to={`/${name}/projects`}> <label>{name}</label> </Link>
                     <span> { location } </span>
                     <span> { sectors.join(',   ') } </span>
 
@@ -56,7 +56,7 @@ function User(props) {
 
                     {
                         posts.map( (p, index) => (
-                            index < 4 && <Link to={`/${name}/${p._id}`}> <Image key={p._id} src={p.url_image} rounded /> </Link>
+                            index < 4 && <Link to={`/${name}/gallery/${p._id}`}> <Image key={p._id} src={p.url_image} rounded /> </Link>
                         ) )
                     }
 

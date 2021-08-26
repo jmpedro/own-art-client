@@ -1,23 +1,45 @@
-import React, { useState } from 'react'
-import { Menu, Dropdown, Icon } from 'semantic-ui-react'
+import React, { useState, useEffect } from 'react'
+import { Menu, Dropdown, Icon, Loader } from 'semantic-ui-react'
 import useTheme from '../../hooks/useTheme';
 import './NavFilters.scss';
 import Content from '../Content'
 import Users from '../Users'
-import { usersDB } from '../../api/users'
-
+import { getPostFromUserApi } from '../../api/post';
 
 const NavFilters = props => {
 
-    const { allPosts, header } = props;
-    const [activeItem, setActiveItem] = useState('Proyectos');
+    const { allPosts, header, usersDB } = props;
     const { theme } = useTheme();
+
+    const [activeItem, setActiveItem] = useState('Proyectos');
+    const [postUser, setPostUser] = useState(null);
 
     const handleItemClick = (name) => {
 
         setActiveItem(name)
 
-    } 
+    }
+
+    useEffect(() => {
+        ( async () => {
+
+            let arrayPost = [];
+
+            if( usersDB ) {
+
+                for (const user of usersDB.finalFilters) {
+        
+                    const response = await getPostFromUserApi(user.name);
+                    arrayPost.push(response.projects);
+    
+                }
+
+            }
+
+            setPostUser(arrayPost)
+            
+        } )()
+    }, [activeItem === 'Usuarios'])
 
     return(
         <>
@@ -91,9 +113,12 @@ const NavFilters = props => {
             </div>   
 
             {/* Contenido de los filtros */}
-            {   activeItem === 'Proyectos' ? 
+            {  
+                activeItem === 'Proyectos' ? 
                 <Content allPosts={allPosts} header={header} /> : 
-                <Users usersDB={usersDB} header={'Todos los usuarios'} />
+                postUser.length > 0 ? 
+                    <Users usersDB={usersDB} header={'Todos los usuarios'} projects={postUser} /> : 
+                    <Loader active={true}><label>Cargando usuarios</label></Loader>
             }
            
 

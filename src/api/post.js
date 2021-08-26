@@ -1,3 +1,5 @@
+import { URL_PATH } from "../utils/constants";
+
 
 // Obtenemos todas las publicaciones
 export const getAllPostApi = (url) => {
@@ -9,6 +11,24 @@ export const getAllPostApi = (url) => {
     .catch(err => {
         return err;
     })
+
+}
+
+// Obtener las publicaciones de un usuario
+export const getPostFromUserApi = async (name) => {
+
+    try {
+        
+        const response = await fetch(`${URL_PATH}/${name}`);
+        const result = await response.json();
+
+        return result;
+
+    } catch (error) {
+        
+        return error;
+
+    }
 
 }
 

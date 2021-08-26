@@ -1,3 +1,22 @@
+
+// Obtenemos todos los usuarios
+export const getAllUsersApi = async (url) => {
+
+    try {
+        
+        const response = await fetch(url);
+        const result = await response.json();
+
+        return result;
+
+    } catch (error) {
+        
+        return error;
+
+    }
+
+}
+
 export const usersDB = {
     "finalFilters": [
         {
